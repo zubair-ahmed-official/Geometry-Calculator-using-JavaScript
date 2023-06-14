@@ -1,0 +1,71 @@
+.navBar {
+    margin: 20px 15px;
+    background-color: rgba(103, 190, 45, 0.1);
+}
+.btn-blog{
+    padding: 3px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color:rgb(16, 144, 216);
+    color: white;
+    font-weight: 500;
+}
+.C1:hover{
+    background-color: rgb(281, 188, 237);
+}
+.C2:hover{
+    background-color: rgb(156, 224, 149);
+}
+.C3:hover{
+    background-color: rgba(213, 216, 16, 0.751);
+}
+
+.C5:hover{
+    background-color: rgba(182, 69, 223, 0.551);
+}
+.C6:hover{
+    background-color: rgba(222, 86, 111, 0.751);
+}
+.C7:hover{
+    background-color: rgba(16, 189, 216, 0.751);
+}
+.inputValue
+{
+    width:105px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+}
+#Triangle, #Rectangle, #Parallelogram, #Rhombus, #Pentagon, #Ellipse
+{
+    display: none;
+}
+tr td{
+    width: 160px;
+    text-align: left;
+}
+.btn-calculate
+{
+    padding:8px 120px;
+    border: none;
+    background-color: rgb(16, 144, 216);
+    font-weight: 500;
+    border-radius: 6px;
+}
+.btn-convert
+{
+    padding:7px 10px;
+    border: none;
+    background-color: rgb(16, 144, 216);
+    font-size: 10px;
+    /* font-weight: 500; */
+    border-radius: 6px; 
+    color: white;
+}
+img{
+    margin-top: 20px;
+    width: 220px;
+    height: 160px;
+}
+.hidden{
+    visibility: hidden;
+}

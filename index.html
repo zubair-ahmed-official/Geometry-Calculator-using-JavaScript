@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="navBar">
+        <nav class="navbar">
+            <div class="container-fluid">
+
+                <span style="padding-left: 5px;">
+                    <h4 style="font-weight: 700;">Geometry Calculator</h4>
+                    
+                </span>
+                <form class="d-flex" role="search">
+                   <a href="blog.html">
+                    <input type="button" class="btn-blog" href="blog.html" value="Blog"></a>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div class="ms-3 mb-3 me-3">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12  mb-3 mb-sm-0">
+                <div class="card C1 mb-3">
+                    <div class="card-body text-center">
+                        <p class=""><img src="images/triangle.png"></p>
+                        <h5 class="card-title text-center">Triangle</h5>
+                        <p>Area (A) = 0.5 x b x h</p>
+                        <p>
+                            <input id="triangleB" class="inputValue" type="text" placeholder=" b"> cm
+                            &nbsp;
+                            <input id="triangleH" class="inputValue" type="text" placeholder=" h"> cm
+                        </p>
+                        <p class="mt-5"><button href="#" id="calculateTriangle"
+                                class="btn-calculate text-white"
+                                >Calculate</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12  mb-3 mb-sm-0">
+                <div class="card C2 mb-3">
+                    <div class="card-body text-center">
+                        <p class=""><img src="images/rectangle.png"></p>
+                        <h5 class="card-title text-center">Rectangle</h5>
+                        <p>Area (A) = w x l</p>
+                        <p>
+                            <input id="rec1" class="inputValue" type="text" placeholder=" w"> cm
+                            &nbsp;
+                            <input id="rec2" class="inputValue" type="text" placeholder=" l"> cm
+                        </p>
+                        <p class="mt-5 "><button href="#"     
+                            
+                            id="recArea"
+                                class="btn-calculate text-white"
+                                >Calculate</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-12  mb-3 mb-sm-0">
+                <div class="card C3 mb-3">
+                    <div class="card-body text-center">
+                        <p class=""><img src="images/parallelogram.png"></p>
+                        <h5 class="card-title text-center">Parallelogram</h5>
+                        <p>Area (A) = b x h</p>
+                        <p>
+                            <input id="Paralel1" class="inputValue" type="text" placeholder=" b"> cm
+                            &nbsp;
+                            <input id="Paralel2" class="inputValue" type="text" placeholder=" h"> cm
+                        </p>
+                        <p class="mt-5 "><button href="#" id="recParallel"
+                                class="btn-calculate text-white">Calculate</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 order-first order-lg-last mb-3 mb-sm-0 C4">
+                <div class="card ">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center mb-4">
+                            <u>Area Calculation</u>
+                        </h5>
+                        <table id="tablenum">
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                </tr>
+                        <tr id="Triangle">
+                            <td>
+                                <span id="trNum"></span>. Triangle </td>
+                            <td>
+                            <span id="areaTraingle"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+
+                            <!-- <td> <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+
+                        <tr id="Rectangle">
+                            <td>
+                                <span id="recNum"></span>. Rectangle
+                            </td>
+                            <td>
+                            <span id="areaRectangle"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+                            <!-- <td > <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+
+                        <tr id="Parallelogram">
+                            <td>
+                                <span id="paraNum"></span>. Parallelogram
+                            </td>
+                            <td >
+                            <span id="areaParallel"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+                            <!-- <td > <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+
+                        <tr id="Rhombus">
+                            <td>
+                                <span id="rhombusNum"></span>. Rhombus
+                            </td>
+                            <td >
+                            <span id="areaRhombus"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+                            <!-- <td> <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+
+                        <tr id="Pentagon">
+                            <td >
+                                <span id="pentagonNum"></span>. Pentagon
+                            </td>
+
+                            <td>
+                            <span id="areaPentagon"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+
+                            <!-- <td> <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+
+
+                        <tr id="Ellipse">
+                            <td>
+                                <span id="ellipseNum"></span>. Ellipse
+                            </td>
+                            <td>
+                            <span id="areaEllipse"></span>
+                            <span>cm <sup>2</sup></span>
+                            </td>
+                            <!-- <td > <button class="btn-convert">Convert to m<sup>2</sup></button></td> -->
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="card-group">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12 mb-3 mb-sm-0">
+                    <div class="card C5">
+                        <div class="card-body text-center">
+                            <p class=""><img src="images/rhombus.png"></p>
+                            <h5 class="card-title text-center">Rhombus</h5>
+                            <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+
+                            <p>
+                                <input id="rhombus1" class="inputValue" type="text" placeholder=" d1"> cm
+                                &nbsp;
+                                <input id="rhombus2" class="inputValue" type="text" placeholder=" d2"> cm
+                            </p>
+                            <p class="mt-5 "><button href="#" id="rhombusArea"
+                                    class="btn-calculate text-white">Calculate</button></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12  mb-3 mb-sm-0">
+                    <div class="card C6">
+                        <div class="card-body text-center">
+                            <p class=""><img src="images/pentagon.png"></p>
+                            <h5 class="card-title text-center">Pentagon</h5>
+                            <p>Area (A) = 0.5 x p x b</p>
+                            <p>
+                                <input id="pentagon1" class="inputValue" type="text" placeholder=" p"> cm
+                                &nbsp;
+                                <input id="pentagon2" class="inputValue" type="text" placeholder=" b"> cm
+                            </p>
+                            <p class="mt-5 "><button href="#"  id="pentagonArea"
+                                    class="btn-calculate text-white">Calculate</button></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3 mb-sm-0">
+                    <div class="card C7">
+                        <div class="card-body text-center">
+                            <p class=""><img src="images/ellipse.png"></p>
+                            <h5 class="card-title text-center">Ellipse</h5>
+                            <p>Area (A) = &pi;ab</p>
+                            <p>
+                                <input id="ellipseA" class="inputValue" type="text" placeholder=" a"> cm
+                                &nbsp;
+                                <input id="ellipseB" class="inputValue" type="text" placeholder=" b"> cm
+                            </p>
+                            <p class="mt-5 "><button href="#" id="ellipseArea"
+                                    class="btn-calculate text-white">Calculate</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 mb-3 mb-sm-0">
+                    <div class="card hidden">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
